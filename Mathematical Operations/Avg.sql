@@ -1,0 +1,1 @@
+SELECT AVG(balance) from customer where city = 'İstanbul';
