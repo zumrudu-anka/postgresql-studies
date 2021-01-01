@@ -1,0 +1,1 @@
+select d.name, f.name from "Department" as d CROSS JOIN "Faculty" as f;

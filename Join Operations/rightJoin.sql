@@ -1,0 +1,1 @@
+select d.id, f.name as "Faculty", d.name as "Department" from "Department" as d RIGHT JOIN "Faculty" as f on d.faculty = f.id;

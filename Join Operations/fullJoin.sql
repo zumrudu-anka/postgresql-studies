@@ -1,0 +1,1 @@
+select j.name, c.name, c.surname, c.city, c.balance from customer as c FULL JOIN job as j on c.job = j.id;
