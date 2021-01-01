@@ -1,8 +1,13 @@
-### Join Operations
+### JOIN OPERATIONS
 
-#### Inner Join
+#### INNER JOIN
 
-> SQL Example : 
+The INNER JOIN selects records that have matching values in both tables.
+
+<p align="center">
+    <img src = "">
+</p>
+- SQL Example : 
 
 ```
 select c.name, c.surname, c.city, j.name from customer as c inner join job as j on c.job = j.id;
