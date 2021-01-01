@@ -1,0 +1,64 @@
+-- Do $$
+-- Declare
+--     num1 int := 24;
+--     num2 int := 15;
+-- begin
+-- if num1 % 2 = 0 then
+-- 	raise notice 'The Number is Even';
+-- else
+-- 	raise notice 'The Number is Odd';
+-- end if;
+-- end $$;
+
+----------------------------------------------------------
+
+-- Do $$
+-- Declare
+--     exam1 int := 10;
+--     exam2 int := 15;
+-- 	exam3 int := 99;
+-- 	examAverage int;
+-- begin
+-- 	examAverage := (exam1 + exam2 + exam3) / 3;
+-- 	raise notice 'Exam Average: %', examAverage;
+-- if examAverage >= 50 then
+-- 	raise notice 'You Passed!';
+-- else
+-- 	raise notice 'You Don''t Passed!';
+-- end if;
+-- end $$;
+
+----------------------------------------------------------
+
+-- Do $$
+-- Declare
+-- 	departmentId int := 3;
+--     lessonCount int;
+-- 	departmentName text;
+-- begin
+-- 	lessonCount := (Select count(id) from lesson where department = departmentId);
+-- 	departmentName := (Select name from "Department" where id = departmentId);
+-- if lessonCount > 3 then
+-- 	raise notice '% Bölümünde 3''ten fazla ders var. Ders Sayisi : %', departmentName, lessonCount;
+-- else
+-- 	raise notice '% Bölümünde 3''ten az ders var. Ders Sayisi : %', departmentName, lessonCount;
+-- end if;
+-- end $$;
+
+----------------------------------------------------------
+
+-- Do $$
+-- Declare
+-- 	lessonCount int;
+-- 	departmentName varchar(20) := 'Software Engineering';
+-- Begin
+-- 	lessonCount := (select count(id) from lesson where department = (select distinct id from "Department" where name = departmentName));
+-- If lessonCount > 3 then
+-- 	raise notice '% bölümünde 3''ten fazla ders var. Ders Sayısı : %', departmentName, lessonCount;
+-- Else If lessonCount = 3 then
+-- 	raise notice '% bölümünde 3 ders var.', departmentName;
+-- Else
+-- 	raise notice '% bölümünde 3''ten az ders var. Ders Sayısı : %', departmentName, lessonCount;
+-- End If;
+-- End If;
+-- End $$
