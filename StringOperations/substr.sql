@@ -4,3 +4,7 @@ select substr('Osman Durdağ', 4, 6);
 -- index birden baslar. ikinci parametre indexindeki deger dahildir.
 
 -- Result : 'an Dur'
+
+select substring('Osman Durdağ', 4, 6);
+
+--> substr ve substring fonksiyonu tamamen aynidir.
