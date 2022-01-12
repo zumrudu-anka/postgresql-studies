@@ -1,0 +1,1 @@
+SELECT * FROM Customers WHERE age > 30 ORDER BY ID ASC, Name DESC;
