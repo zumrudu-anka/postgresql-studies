@@ -20,21 +20,58 @@ FROM my_table;
 
 SELECT
 	SUM (CASE
-          WHEN rental_rate = 0.99 THEN 1
-	       ELSE 0
-	      END
+		 	WHEN rental_rate = 0.99 THEN 1
+		 	ELSE 0
+		 END
 	) AS "Economy",
-	SUM (
-		CASE
-		WHEN rental_rate = 2.99 THEN 1
-		ELSE 0
-		END
+	SUM (CASE
+		 	WHEN rental_rate = 2.99 THEN 1
+		 	ELSE 0
+		 END
 	) AS "Mass",
-	SUM (
-		CASE
-		WHEN rental_rate = 4.99 THEN 1
-		ELSE 0
-		END
-	) AS "Premium"
-FROM
-	film;
+	SUM (CASE
+		 	WHEN rental_rate = 4.99 THEN 1
+		 	ELSE 0
+		 END
+	) AS "Premium",
+FROM film;
+
+-- Another Example
+
+SELECT
+	title,
+	rating,
+	CASE rating
+		WHEN 'G' THEN 'General Audiences'
+		WHEN 'PG' THEN 'Parental Guidance Suggested'
+		WHEN 'PG-13' THEN 'Parents Strongly Cautioned'
+		WHEN 'R' THEN 'Restricted'
+		WHEN 'NC-17' THEN 'Adults Only'
+	END rating_description
+FROM film
+ORDER BY title;
+
+-- Another One
+
+SELECT
+	SUM(CASE rating
+			WHEN 'G' THEN 1 
+			ELSE 0 
+		END) "General Audiences",
+	SUM(CASE rating
+			WHEN 'PG' THEN 1 
+			ELSE 0 
+		END) "Parental Guidance Suggested",
+	SUM(CASE rating
+			WHEN 'PG-13' THEN 1 
+			ELSE 0 
+		END) "Parents Strongly Cautioned",
+	SUM(CASE rating
+			WHEN 'R' THEN 1 
+			ELSE 0 
+		END) "Restricted",
+	SUM(CASE rating
+			WHEN 'NC-17' THEN 1 
+			ELSE 0 
+		END) "Adults Only"
+FROM film;
