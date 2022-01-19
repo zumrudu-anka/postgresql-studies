@@ -5,3 +5,11 @@ SELECT POSITION('3' IN 'W3Schools.com') AS MatchPosition;
 -- SELECT CustomerName, POSITION("a" IN CustomerName) FROM Customers;
 
 -- SELECT POSITION("COM" IN "W3Schools.com") AS MatchPosition;
+
+
+
+-- Alternative Function:
+
+SELECT strpos('Osman', 'a');
+
+-- First param is String to Search, second param is substring to search;
