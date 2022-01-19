@@ -10,6 +10,6 @@ SELECT POSITION('3' IN 'W3Schools.com') AS MatchPosition;
 
 -- Alternative Function:
 
-SELECT strpos('Osman', 'a');
+SELECT STRPOS('Osman', 'a');
 
 -- First param is String to Search, second param is substring to search;
