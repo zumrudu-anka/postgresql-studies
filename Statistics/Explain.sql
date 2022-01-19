@@ -14,5 +14,3 @@ EXPLAIN (ANALYZE ON, BUFFERS ON) SELECT ...;
 -- pg_statio_*Ancak sistem katalogları aracılığıyla IO istatistikleri mevcuttur.
 -- Veriler bir oturuma dahil edilmediğinden mükemmel değildir, ancak sorguların ne kadar verimli olduğunu ve temiz oda ortamında olduğunu görmek istiyorsanız,
 -- çoğu sorun için yeterince iyi çalışır.
-
-[PostgreSQL Monitoring Stats](http://www.postgresql.org/docs/current/static/monitoring-stats.html)
