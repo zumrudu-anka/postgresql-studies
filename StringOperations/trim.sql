@@ -1,1 +1,0 @@
-SELECT TRIM('    SQL Tutorial    ') AS TrimmedString;
