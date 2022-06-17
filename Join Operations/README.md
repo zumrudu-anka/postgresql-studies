@@ -3,7 +3,7 @@
 A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
 
 <p align="center">
-    <img src = "" alt="SQL JOINS">
+    <img src = "./img/SQL_Joins.svg" alt="SQL JOINS">
 </p>
 
 #### INNER JOIN
@@ -11,7 +11,7 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 The INNER JOIN selects records that have matching values in both tables.
 
 <p align="center">
-    <img src = "INNER JOIN">
+    <img src = "./img/innerjoin.gif" alt = "INNER JOIN">
 </p>
 - SQL Example : 
 
